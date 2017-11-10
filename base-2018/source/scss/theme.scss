@@ -1,8 +1,44 @@
 @import 'settings';
 @import 'fonts';
 @import 'breakpointdebug';
-@import 'prism';
+//@import 'prism'; // what and where is prism?!
 
 h1 {
   color: red;
+}
+
+body {
+    font-family: $font-sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bitter', serif;
+}
+
+/* siteheader */
+
+.siteheader {
+    height: 70vh;
+    position: relative;
+    background-color: #2C1C1C;
+
+
+
+    .siteheader-wrapper { // vertical alignment of th econtent in this container
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .siteheader-content {
+        text-align: center;
+    }
+
+}
+
+.image {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }

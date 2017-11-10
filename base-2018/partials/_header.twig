@@ -1,10 +1,13 @@
 <!-- Header bar -->
-<header>
-    {# the values in the 'config' object are taken directly from the file app/config/config.yml #}
-    <h2><a href="{{ path('homepage') }}">{{ config.get('general/sitename') }}</a></h2>
-    {% if config.get('general/payoff') %}
-        <p>{{ config.get('general/payoff') }}</p>
-    {% endif %}
-
-    <hr>
+<header class="siteheader">
+    <div class="siteheader-wrapper">
+        {# we want a background image on this wraper. Can we do this per screensize somehow? #}
+        <div class="siteheader-content">
+            {# the values in the 'config' object are taken directly from the file app/config/config.yml #}
+            <h1><a href="{{ path('homepage') }}">{{ config.get('general/sitename') }}</a></h1>
+            {% if config.get('general/payoff') %}
+                <p>{{ config.get('general/payoff') }}</p>
+            {% endif %}
+        </div>
+    </div>
 </header>

@@ -1,2 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+@import url("https://fonts.googleapis.com/css?family=Bitter");
 h1 {
-  color: #F00; }
+  color: red; }
+
+body {
+  font-family: "Roboto", sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bitter', serif; }
+
+/* siteheader */
+.siteheader {
+  height: 70vh;
+  position: relative;
+  background-color: #2C1C1C; }
+  .siteheader .siteheader-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%); }
+  .siteheader .siteheader-content {
+    text-align: center; }
+
+.image {
+  margin-top: 1rem;
+  margin-bottom: 1rem; }

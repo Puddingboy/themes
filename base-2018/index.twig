@@ -2,21 +2,29 @@
 
 {% block main %}
 
-    {% if record is defined %}
+        {% if record is defined %}
+<section class="section">
+    <div class="container">
+        <div class="column">
+            <h1 class="title">{{ record.title }}</h1>
 
-        <h1>{{ record.title }}</h1>
+            {# Remove this block if you don't need it anymore. #}
+            {{ include('partials/_fresh_install.twig') }}
 
-        {# Remove this block if you don't need it anymore. #}
-        {{ include('partials/_fresh_install.twig') }}
+            {{ record.teaser }}
 
-        {{ record.teaser }}
+            <figure class="image">
+            {{ popup(record.image, 1200, 500) }}
+            </figure>
 
-        {{ popup(record.image, 1200, 500) }}
+            {% if record.body is not empty %}
+            <a class="button" href="{{ record.link }}">» Continue reading</a>
+            {% endif %}
 
-        {{ record.body }}
-
-        {{ include('partials/_recordfooter.twig', { 'record': record }) }}
-
+            {#{{ include('partials/_recordfooter.twig', { 'record': record }) }}#}
+        </div>
+    </div>
+</section>
     {% endif %}
 
 {% endblock main %}
